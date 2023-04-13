@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+
+  <title>Frontend Mentor | Calculator app</title>
+
+</head>
+
+<body>
+  <main>
+    <div class="head">
+      <h1>calc</h1>
+      <div class="theme-container">
+        <p class="theme-title">THEME</p>
+        <div class="theme-options">
+          <div class="theme-value">
+            <p>1</p>
+            <p>2</p>
+            <p>3</p>
+          </div>
+          <div class="themes">
+            <input type="radio" name="theme" id="theme1" checked>
+            <input type="radio" name="theme" id="theme2">
+            <input type="radio" name="theme" id="theme3">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="calc-screen">
+      <input type="text" name="screen" class="screen" disabled>
+    </div>
+    <div class="calc-keypad">
+      <div class="rows">
+        <button class="seven btn">7</button>
+        <button class="eight btn">8</button>
+        <button class="nine btn">9</button>
+        <button class="delete btn">DEL</button>
+      </div>
+      <div class="rows">
+        <button class="four btn">4</button>
+        <button class="five btn">5</button>
+        <button class="six btn">6</button>
+        <button class="add btn">+</button>
+      </div>
+      <div class="rows">
+        <button class="one btn">1</button>
+        <button class="two btn">2</button>
+        <button class="three btn">3</button>
+        <button class="subtract btn">-</button>
+      </div>
+      <div class="rows">
+        <button class="dot btn">.</button>
+        <button class="zero btn">0</button>
+        <button class="devide btn">/</button>
+        <button class="multiply btn">x</button>
+      </div>
+      <div class="rows bottom-keys">
+        <button class="reset btn">RESET</button>
+        <button class="equal btn">=</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
