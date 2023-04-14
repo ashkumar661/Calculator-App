@@ -7,22 +7,18 @@ let equation = "";
 buttons.forEach(button =>{
     button.addEventListener('click',()=>{
         if(button.innerHTML === "="){
-            let evaluatedValue = eval(equation);
+            equation = eval(equation.replace(/x/g,'*'));
             if(evaluatedValue == "Infinity" || evaluatedValue == "-Infinity" ){
                 display.value = "Cannot divide by zero"
-            } else {
-                display.value = evaluatedValue;
                 equation = "";
-            }
-            console.log("1st if statement");
+            } 
+            display.value = equation;
         } else if(button.innerHTML === "DEL"){
             equation = equation.slice(0,-1);
             display.value = equation;
-            console.log("2nd if statement");
         } else if(button.innerHTML === "RESET"){
             equation = "";
             display.value = "";
-            console.log("3rd if statement");
         } else if(button.innerHTML === "-" || button.innerHTML === "+" || button.innerHTML === "/" || button.innerHTML === "x"){
             if(equation === ""){
                 equation = "0".concat(button.innerHTML);
@@ -31,20 +27,17 @@ buttons.forEach(button =>{
                 equation = equation.slice(0,-1);
                 equation += button.innerHTML;
                 display.value=equation;
-                console.log("inside  operator else if", equation);
             } else if(button.innerHTML === "x"){
-                equation += "*";
+                equation += button.innerHTML;
                 display.value = equation;
             } else{
                 equation += button.innerHTML;
                 display.value=equation;
-                console.log("inside else part of operator");
             }
         }
         else {
             equation += button.innerHTML;
             display.value = equation;
-            console.log("else statement: "+ equation);
         }
     })
 })
